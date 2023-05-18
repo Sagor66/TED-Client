@@ -1,0 +1,524 @@
+{
+  "toys": [
+    {
+      "image": "https://i.ibb.co/sPDx667/Snap-Circuits.jpg",
+      "name": "Snap Circuits",
+      "price": 29.99,
+      "description": "Build and experiment with electronic circuits using snap-together components.",
+      "seller": {
+        "name": "Toy Emporium",
+        "email": "toys@example.com"
+      },
+      "quantity": 25,
+      "rating": 4.5,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/bbQSbjg/Chemistry-Set.jpg",
+      "name": "Chemistry Set",
+      "price": 39.99,
+      "description": "Discover the wonders of chemistry through fun and educational experiments.",
+      "seller": {
+        "name": "Science World",
+        "email": "scienceworld@example.com"
+      },
+      "quantity": 15,
+      "rating": 4.2,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/bR3Vh47/Microscope-Kit.jpg",
+      "name": "Microscope Kit",
+      "price": 49.99,
+      "description": "Explore the microscopic world with a high-quality microscope and prepared slides.",
+      "seller": {
+        "name": "Explorers' Club",
+        "email": "explorersclub@example.com"
+      },
+      "quantity": 20,
+      "rating": 4.7,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/LvHR5Nq/Solar-System-Model.jpg",
+      "name": "Solar System Model",
+      "price": 19.99,
+      "description": "Assemble a model of the solar system and learn about the planets.",
+      "seller": {
+        "name": "Space Discoveries",
+        "email": "spacediscoveries@example.com"
+      },
+      "quantity": 30,
+      "rating": 4.0,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/z4JVcNx/Weather-Station-Kit.jpg",
+      "name": "Weather Station Kit",
+      "price": 34.99,
+      "description": "Build a weather station and observe and record weather conditions.",
+      "seller": {
+        "name": "Weather Masters",
+        "email": "weathermasters@example.com"
+      },
+      "quantity": 10,
+      "rating": 4.3,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/5jVLqYg/Volcano-Science-Kit.jpg",
+      "name": "Volcano Science Kit",
+      "price": 24.99,
+      "description": "Create and erupt your own volcano with this exciting science kit.",
+      "seller": {
+        "name": "Science Explorers",
+        "email": "scienceexplorers@example.com"
+      },
+      "quantity": 18,
+      "rating": 4.1,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/6Dwmpwx/Fossil-Excavation-Kit.jpg",
+      "name": "Fossil Excavation Kit",
+      "price": 27.99,
+      "description": "Dig and uncover real fossils and learn about prehistoric life.",
+      "seller": {
+        "name": "Paleontologist Treasures",
+        "email": "paleotreasures@example.com"
+      },
+      "quantity": 12,
+      "rating": 4.6,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/VQPwrTL/Botany-Greenhouse-Kit.jpg",
+      "name": "Botany Greenhouse Kit",
+      "price": 31.99,
+      "description": "Grow and study different plant species in your own mini greenhouse.",
+      "seller": {
+        "name": "Garden Oasis",
+        "email": "gardenoasis@example.com"
+      },
+      "quantity": 8,
+      "rating": 4.4,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/zPkQPQ8/Human-Anatomy-Model.jpg",
+      "name": "Human Anatomy Model",
+      "price": 54.99,
+      "description": "Assemble a realistic model of the human body and learn about its organs.",
+      "seller": {
+        "name": "Medical Learning",
+        "email": "medicallearning@example.com"
+      },
+      "quantity": 22,
+      "rating": 4.8,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/d68yJBG/Crystal-Growing-Kit.jpg",
+      "name": "Crystal Growing Kit",
+      "price": 21.99,
+      "description": "Grow and collect beautiful crystals with this hands-on kit.",
+      "seller": {
+        "name": "Crystal Wonders",
+        "email": "crystalwonders@example.com"
+      },
+      "quantity": 14,
+      "rating": 4.3,
+      "subCategory": "Science Kits"
+    },
+    {
+      "image": "https://i.ibb.co/Mfwr49m/Math-Dice.jpg",
+      "name": "Math Dice",
+      "price": 9.99,
+      "description": "Enhance math skills with fun dice games that involve arithmetic operations.",
+      "seller": {
+        "name": "Toy Emporium",
+        "email": "toys@example.com"
+      },
+      "quantity": 20,
+      "rating": 4.5,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/9qSJVv5/Pattern-Blocks.jpg",
+      "name": "Pattern Blocks",
+      "price": 14.99,
+      "description": "Explore geometric shapes and patterns with colorful pattern blocks.",
+      "seller": {
+        "name": "Math World",
+        "email": "mathworld@example.com"
+      },
+      "quantity": 15,
+      "rating": 4.2,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/DMQ9SGq/Math-Balance-Scale.jpg",
+      "name": "Math Balance Scale",
+      "price": 19.99,
+      "description": "Learn about equivalence and balancing equations with a hands-on balance scale.",
+      "seller": {
+        "name": "Educational Tools",
+        "email": "tools@example.com"
+      },
+      "quantity": 12,
+      "rating": 4.7,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/PzyzG48/Math-Manipulatives.jpg",
+      "name": "Math Manipulatives",
+      "price": 29.99,
+      "description": "Engage in interactive math activities using various manipulative tools.",
+      "seller": {
+        "name": "Learning Toys",
+        "email": "learningtoys@example.com"
+      },
+      "quantity": 25,
+      "rating": 4.0,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/pwgKCGd/Math-Puzzles.jpg",
+      "name": "Math Puzzles",
+      "price": 12.99,
+      "description": "Solve brain-teasing math puzzles and improve problem-solving skills.",
+      "seller": {
+        "name": "Puzzle World",
+        "email": "puzzleworld@example.com"
+      },
+      "quantity": 18,
+      "rating": 4.3,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/SJ2r5nK/Abacus.jpg",
+      "name": "Abacus",
+      "price": 24.99,
+      "description": "Master basic arithmetic and counting using an ancient calculating tool.",
+      "seller": {
+        "name": "Math Tools",
+        "email": "mathtools@example.com"
+      },
+      "quantity": 30,
+      "rating": 4.1,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/93SQRs1/Math-Flash-Cards.jpg",
+      "name": "Math Flash Cards",
+      "price": 8.99,
+      "description": "Practice math facts and improve calculation speed with flashcards.",
+      "seller": {
+        "name": "Flashy Learning",
+        "email": "flashylearning@example.com"
+      },
+      "quantity": 22,
+      "rating": 4.6,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/cLCs5vs/Tangrams.jpg",
+      "name": "Tangrams",
+      "price": 11.99,
+      "description": "Explore geometry and spatial reasoning through tangram puzzles.",
+      "seller": {
+        "name": "Geometric Games",
+        "email": "geometricgames@example.com"
+      },
+      "quantity": 16,
+      "rating": 4.4,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/sVN705g/Math-Board-Games.jpg",
+      "name": "Math Board Games",
+      "price": 16.99,
+      "description": "Have fun with educational board games that reinforce math skills.",
+      "seller": {
+        "name": "Game Masters",
+        "email": "gamemasters@example.com"
+      },
+      "quantity": 10,
+      "rating": 4.8,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/y0tgj8H/Fraction-Tower-Cubes.jpg",
+      "name": "Fraction Tower Cubes",
+      "price": 22.99,
+      "description": "Visualize and compare fractions using fraction tower cubes.",
+      "seller": {
+        "name": "Fraction Fun",
+        "email": "fractionfun@example.com"
+      },
+      "quantity": 14,
+      "rating": 4.3,
+      "subCategory": "Math Kits"
+    },
+    {
+      "image": "https://i.ibb.co/KhHs3bf/LEGO-Mindstorms.jpg",
+      "name": "LEGO Mindstorms",
+      "price": 199.99,
+      "description": "Build and program your own robots using LEGO bricks and coding software.",
+      "seller": {
+        "name": "Brick Builders",
+        "email": "brickbuilders@example.com"
+      },
+      "quantity": 10,
+      "rating": 4.7,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/4MJH7SP/K-NEX-Building-Set.jpg",
+      "name": "K'NEX Building Set",
+      "price": 39.99,
+      "description": "Create imaginative structures and models with versatile K'NEX building pieces.",
+      "seller": {
+        "name": "Construction Toys",
+        "email": "constructiontoys@example.com"
+      },
+      "quantity": 20,
+      "rating": 4.4,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/1XTy1RN/Marble-Run-Set.jpg",
+      "name": "Marble Run Set",
+      "price": 29.99,
+      "description": "Design and build intricate tracks for marbles to race down.",
+      "seller": {
+        "name": "Marble Fun",
+        "email": "marblefun@example.com"
+      },
+      "quantity": 15,
+      "rating": 4.2,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/Lz7hN2b/Straw-Construction-Set.jpg",
+      "name": "Straw Construction Set",
+      "price": 19.99,
+      "description": "Construct various structures using colorful straws and connectors.",
+      "seller": {
+        "name": "Creative Builders",
+        "email": "creativebuilders@example.com"
+      },
+      "quantity": 25,
+      "rating": 4.5,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/89JM33N/Magnetic-Building-Blocks.jpg",
+      "name": "Magnetic Building Blocks",
+      "price": 34.99,
+      "description": "Create unique structures using magnetic blocks that easily connect and stack.",
+      "seller": {
+        "name": "Magnet Toys",
+        "email": "magnettoys@example.com"
+      },
+      "quantity": 18,
+      "rating": 4.3,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/PtwYyBZ/Circuit-Building-Kit.jpg",
+      "name": "Circuit Building Kit",
+      "price": 49.99,
+      "description": "Learn about electronics and circuits by building your own working circuits.",
+      "seller": {
+        "name": "ElectroLab",
+        "email": "electrolab@example.com"
+      },
+      "quantity": 12,
+      "rating": 4.6,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/dMmjtgh/Wind-Turbine-Kit.jpg",
+      "name": "Wind Turbine Kit",
+      "price": 59.99,
+      "description": "Build a wind turbine and explore renewable energy concepts through hands-on experimentation.",
+      "seller": {
+        "name": "Eco Innovations",
+        "email": "ecoinnovations@example.com"
+      },
+      "quantity": 8,
+      "rating": 4.8,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/ChTwTYZ/Hydraulic-Engineering-Kit.jpg",
+      "name": "Hydraulic Engineering Kit",
+      "price": 69.99,
+      "description": "Construct hydraulic-powered machines and learn about fluid dynamics.",
+      "seller": {
+        "name": "Hydro Mechanics",
+        "email": "hydromechanics@example.com"
+      },
+      "quantity": 10,
+      "rating": 4.1,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/r7mfVfg/Bridge-Building-Set.jpg",
+      "name": "Bridge Building Set",
+      "price": 32.99,
+      "description": "Design and build sturdy bridges using a variety of materials and engineering principles.",
+      "seller": {
+        "name": "Engineering Toys",
+        "email": "engineeringtoys@example.com"
+      },
+      "quantity": 14,
+      "rating": 4.0,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/sF3bhqj/Gear-Building-Set.jpg",
+      "name": "Gear Building Set",
+      "price": 24.99,
+      "description": "Create dynamic mechanical systems with interlocking gears and axles.",
+      "seller": {
+        "name": "Mechanical Marvels",
+        "email": "mechanicalmarvels@example.com"
+      },
+      "quantity": 22,
+      "rating": 4.4,
+      "subCategory": "Engineering Kits"
+    },
+    {
+      "image": "https://i.ibb.co/58TsBD9/Toolbox-Set.jpg",
+      "name": "Toolbox Set",
+      "price": 29.99,
+      "description": "A comprehensive set of tools for various DIY and repair projects.",
+      "seller": {
+        "name": "Tool Master",
+        "email": "toolmaster@example.com"
+      },
+      "quantity": 10,
+      "rating": 4.7,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/0MXkzjK/Digital-Multimeter.jpg",
+      "name": "Digital Multimeter",
+      "price": 19.99,
+      "description": "Measure voltage, current, and resistance with precision using a digital multimeter.",
+      "seller": {
+        "name": "Electro Tools",
+        "email": "electrotools@example.com"
+      },
+      "quantity": 20,
+      "rating": 4.5,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/1M9Ld1b/Soldering-Iron-Kit.jpg",
+      "name": "Soldering Iron Kit",
+      "price": 34.99,
+      "description": "Create and repair electronic circuits with a soldering iron kit.",
+      "seller": {
+        "name": "Electro Tools",
+        "email": "electrotools@example.com"
+      },
+      "quantity": 15,
+      "rating": 4.3,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/gTPdf5q/Measuring-Tape.jpg",
+      "name": "Measuring Tape",
+      "price": 9.99,
+      "description": "Accurately measure distances and dimensions with a durable measuring tape.",
+      "seller": {
+        "name": "Measure Masters",
+        "email": "measuremasters@example.com"
+      },
+      "quantity": 25,
+      "rating": 4.6,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/Fxfdx6N/Vernier-Calipers.jpg",
+      "name": "Vernier Calipers",
+      "price": 24.99,
+      "description": "Take precise measurements of length, width, and depth with vernier calipers.",
+      "seller": {
+        "name": "Measure Masters",
+        "email": "measuremasters@example.com"
+      },
+      "quantity": 18,
+      "rating": 4.4,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/2nS4L1c/Engineering-Design-Sketchbook.jpg",
+      "name": "Engineering Design Sketchbook",
+      "price": 14.99,
+      "description": "Sketch and document your engineering designs and ideas in this specialized sketchbook.",
+      "seller": {
+        "name": "Design Depot",
+        "email": "designdepot@example.com"
+      },
+      "quantity": 12,
+      "rating": 4.2,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/w7W63Qd/3-D-Printer.jpg",
+      "name": "3D Printer",
+      "price": 499.99,
+      "description": "Bring your creations to life with a high-quality 3D printer.",
+      "seller": {
+        "name": "Print Pro",
+        "email": "printpro@example.com"
+      },
+      "quantity": 8,
+      "rating": 4.8,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/HVfBPTB/Laser-Cutting-Machine.jpg",
+      "name": "Laser Cutting Machine",
+      "price": 2499.99,
+      "description": "Cut and engrave various materials with precision using a laser cutting machine.",
+      "seller": {
+        "name": "Laser Craft",
+        "email": "lasercraft@example.com"
+      },
+      "quantity": 3,
+      "rating": 4.9,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/yX1WsGr/CNC-Milling-Machine.jpg",
+      "name": "CNC Milling Machine",
+      "price": 5999.99,
+      "description": "Automate your machining process with a computer numerical control (CNC) milling machine.",
+      "seller": {
+        "name": "Machinex",
+        "email": "machinex@example.com"
+      },
+      "quantity": 2,
+      "rating": 4.7,
+      "subCategory": "Engineering Tools"
+    },
+    {
+      "image": "https://i.ibb.co/fkptzb0/Robotic-Arm-Kit.jpg",
+      "name": "Robotic Arm Kit",
+      "price": 89.99,
+      "description": "Build and control your own robotic arm with this educational kit.",
+      "seller": {
+        "name": "RoboTech",
+        "email": "robotech@example.com"
+      },
+      "quantity": 6,
+      "rating": 4.3,
+      "subCategory": "Engineering Tools"
+    }
+  ]
+}
