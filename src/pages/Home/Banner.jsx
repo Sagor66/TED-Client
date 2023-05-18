@@ -5,7 +5,7 @@ import kid3 from "../../assets/banner/kid-pilot-3.png";
 
 const Banner = () => {
   return (
-    <div className="min-h-[700px] bg-banner relative flex items-center justify-center">
+    <div className="min-h-[700px] bg-banner relative flex items-center justify-center mb-32">
       <div>
         <h1 className="font-fredoka text-7xl font-bold text-white mb-5 text-center leading-tight">
           Explore <br /> Play <br /> Learn
