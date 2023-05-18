@@ -20,7 +20,7 @@ const NavBar = () => {
       
       <div className="flex gap-5">
         <Link className="text-primary-style text-hover" to="/">Home</Link>
-        <Link className="text-primary-style text-hover" to="">All Toys</Link>
+        <Link className="text-primary-style text-hover" to="/all-toys">All Toys</Link>
         <Link className="text-primary-style text-hover" to="">My Toys</Link>
         <Link className="text-primary-style text-hover" to="">Add-A-Toy</Link>
         <Link className="text-primary-style text-hover" to="">Blogs</Link>

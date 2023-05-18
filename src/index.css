@@ -22,6 +22,10 @@
   .text-heading {
     @apply font-fredoka text-4xl font-bold tracking-wide text-pink-500 text-center mb-10
   }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-pink-500 to-indigo-500 font-fredoka font-semibold tracking-wide text-lg text-white hover:from-pink-700 hover:to-indigo-700 py-3 px-8 rounded-3xl
+  }
 }
 
 
