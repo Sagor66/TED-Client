@@ -11,7 +11,11 @@
     @apply hover:text-white hover:bg-gradient-to-br hover:from-pink-500 hover:to-indigo-400
   }
 
-  .link-style {
+  .text-primary-style {
     @apply font-fredoka font-semibold text-lg text-pink-500 px-4 py-2 rounded-3xl tracking-wide
+  }
+
+  .footer-text {
+    @apply font-semibold text-slate-500 text-sm mb-1
   }
 }

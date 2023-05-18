@@ -19,11 +19,11 @@ const NavBar = () => {
         </div>
       
       <div className="flex gap-5">
-        <Link className="link-style text-hover" to="/">Home</Link>
-        <Link className="link-style text-hover" to="">All Toys</Link>
-        <Link className="link-style text-hover" to="">My Toys</Link>
-        <Link className="link-style text-hover" to="">Add-A-Toy</Link>
-        <Link className="link-style text-hover" to="">Blogs</Link>
+        <Link className="text-primary-style text-hover" to="/">Home</Link>
+        <Link className="text-primary-style text-hover" to="">All Toys</Link>
+        <Link className="text-primary-style text-hover" to="">My Toys</Link>
+        <Link className="text-primary-style text-hover" to="">Add-A-Toy</Link>
+        <Link className="text-primary-style text-hover" to="">Blogs</Link>
       </div>
       <div>
         <h3>Pro Pic</h3>
