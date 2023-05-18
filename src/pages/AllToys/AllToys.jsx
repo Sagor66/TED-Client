@@ -1,48 +1,55 @@
 import { useEffect, useState } from "react";
 import Toy from "./Toy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
-  const [showMore, setShowMore] = useState(false)
-  let searchTab = ''
+  const [showMore, setShowMore] = useState(false);
+  const [searched, setSearched] = useState(false)
+  const [searchedProduct, setSearchProduct] = useState("");
 
   const handleShowMore = () => {
-    setShowMore(!showMore)
-    console.log(showMore)
-  }
+    setShowMore(!showMore);
+  };
 
-  const handleSearch = event => {
-    event.preventDefault()
-    const searchTabValue = event.target.search.value
-    searchTab = searchTabValue
-    
-  }
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const searchTabValue = event.target.search.value;
+    setSearchProduct(searchTabValue);
+    event.target.reset()
+  };
 
-  console.log(searchTab)
+  const handleBackButton = () => {
+    setSearched(!searched)
+  }
 
   useEffect(() => {
     fetch("http://localhost:5000/toys")
       .then((res) => res.json())
       .then((data) => {
         if (!showMore) {
-          setToys(data.slice(0, 20))
+          setToys(data.slice(0, 20));
         } else {
-          setToys(data)
+          setToys(data);
         }
       });
   }, [showMore]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/toys")
-  //   .then(res => res.json)
-  //   .then(data => {
-  //     const searchedData = data.find(i => i.name === searchTab)
-  //     console.log(searchedData)
-  //     setToys(searchedData)
-  //   })
-  // }, [])  
+  useEffect(() => {
+    fetch("http://localhost:5000/toys")
+      .then((res) => res.json())
+      .then((data) => {
+        const searchedData = data.find((i) => i.name === searchedProduct);
+        if (searchedData) {
+          setToys([searchedData])
+        }
+
+        if (!searched) {
+          setToys(data.slice(0, 20))
+        }
+      });
+  }, [searchedProduct, searched]);
 
   return (
     <div className="max-w-7xl mx-auto my-32 flex flex-col items-center">
@@ -55,11 +62,10 @@ const AllToys = () => {
             placeholder="Search Toys Here.."
             className="input input-bordered border-2 border-pink-500 w-96"
           />
-          <button className="btn btn-square bg-pink-500 border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600">
-          <FontAwesomeIcon
-              className="fa-xl text-white"
-              icon={faSearch}
-            />
+          <button onClick={handleBackButton} className="btn btn-square bg-pink-500 border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600">
+            {
+              searched ? <FontAwesomeIcon className="fa-xl text-white" icon={faArrowLeft} /> : <FontAwesomeIcon className="fa-xl text-white" icon={faSearch} />
+            }
           </button>
         </div>
       </form>
@@ -68,9 +74,15 @@ const AllToys = () => {
           <Toy key={toy._id} toy={toy}></Toy>
         ))}
       </div>
-      {
-        showMore ? <button onClick={handleShowMore} className="btn-primary mt-20">Show Less</button> : <button onClick={handleShowMore} className="btn-primary mt-20">Show More</button>
-      }
+      {showMore ? (
+        <button onClick={handleShowMore} className="btn-primary mt-20">
+          Show Less
+        </button>
+      ) : (
+        <button onClick={handleShowMore} className="btn-primary mt-20">
+          Show More
+        </button>
+      )}
     </div>
   );
 };
