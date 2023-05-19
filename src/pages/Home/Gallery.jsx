@@ -10,7 +10,7 @@ import toy12 from "../../assets/gallery/toy12.png";
 
 const Gallery = () => {
   return (
-    <div className="max-w-7xl mx-auto mb-32">
+    <div className="mb-32">
       <h2 className="text-heading ">Toyland Treasures</h2>
       <div className="grid grid-cols-5 gap-4 shadow-2xl p-10 rounded-xl bg-gradient-to-br from-pink-100 to-indigo-100">
         <div className="min-w-[200px] min-h-[200px] row-span-2 col-span-2">

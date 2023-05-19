@@ -20,7 +20,7 @@
   }
 
   .text-heading {
-    @apply font-fredoka text-4xl font-bold tracking-wide text-pink-500 text-center mb-10
+    @apply font-fredoka text-5xl font-bold tracking-wide text-pink-500 text-center mb-16
   }
 
   .btn-primary {

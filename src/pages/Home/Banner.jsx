@@ -7,10 +7,10 @@ const Banner = () => {
   return (
     <div className="min-h-[700px] bg-banner relative flex items-center justify-center mb-32">
       <div>
-        <h1 className="font-fredoka text-7xl font-bold text-white mb-5 text-center leading-tight">
+        <h1 className="font-fredoka text-8xl font-bold text-white mb-5 text-center leading-tight">
           Explore <br /> Play <br /> Learn
         </h1>
-        <p className="font-fredoka text-2xl font-semibold text-white text-center tracking-wider">
+        <p className="font-fredoka text-3xl font-semibold text-white text-center tracking-wider">
           Discover the World of Educational Toys
         </p>
       </div>
