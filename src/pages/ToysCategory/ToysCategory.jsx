@@ -35,7 +35,7 @@ const ToysCategory = () => {
     <div className="mb-32">
       <h2 className="text-heading">Category Shopping</h2>
       <Tabs>
-        <TabList className="font-fredoka text-2xl font-bold text-pink-500 border-b-8 border-pink-500 rounded-lg">
+        <TabList className="font-fredoka text-2xl font-bold text-pink-400 border-b-8 border-pink-400 rounded-lg">
           <Tab onClick={getCategory}>Science Kits</Tab>
           <Tab onClick={getCategory}>Math Kits</Tab>
           <Tab onClick={getCategory}>Engineering Kits</Tab>
