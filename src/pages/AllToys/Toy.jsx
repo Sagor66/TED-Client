@@ -36,7 +36,7 @@ const Toy = ({ toy }) => {
         </div>
       </div>
       <button className="w-full btn-primary py-2 mb-2">
-        <Link to=''>View Details</Link>
+        <Link to={`/toy/${_id}`}>View Details</Link>
       </button>
     </div>
   );
