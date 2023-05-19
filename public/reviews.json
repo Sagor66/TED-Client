@@ -1,0 +1,32 @@
+[
+  {
+    "name": "John Doe",
+    "image": "https://i.ibb.co/yWzVkLm/person1.jpg",
+    "testimonial": "The educational toys I purchased from this website have been a game-changer for my children. They have not only provided hours of entertainment but have also helped improve their cognitive skills and creativity. Highly recommended!",
+    "rating": 4.5
+  },
+  {
+    "name": "Jane Smith",
+    "image": "https://i.ibb.co/KXQT4BN/person3.jpg",
+    "testimonial": "I'm impressed with the quality and variety of educational toys available on this platform. My kids are constantly engaged and learning while having fun. This website has become my go-to destination for educational toys!",
+    "rating": 4.8
+  },
+  {
+    "name": "Robert Johnson",
+    "image": "https://i.ibb.co/Xx8W0Sm/person2.jpg",
+    "testimonial": "I can't express how much I love the educational toys from this ecommerce website. They have exceeded my expectations in terms of both quality and educational value. My kids are always excited to play and learn with these toys.",
+    "rating": 5
+  },
+  {
+    "name": "Michael Anderson",
+    "image": "https://i.ibb.co/HCGVLjd/person4.jpg",
+    "testimonial": "The educational toys I bought from this platform have truly sparked my children's curiosity and imagination. The toys are thoughtfully designed and encourage critical thinking. I'm grateful to have found such a fantastic resource!",
+    "rating": 4.7
+  },
+  {
+    "name": "Keen Lee",
+    "image": "https://i.ibb.co/822MTFV/person5.jpg",
+    "testimonial": "These educational toys have been a wonderful addition to our homeschooling curriculum. They are engaging, educational, and promote hands-on learning. My kids are excited to learn with these toys every day!",
+    "rating": 4.9
+  }
+]

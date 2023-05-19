@@ -28,8 +28,8 @@ const ToysCategory = () => {
       .then((data) => setToysCategoryData(data));
   }, [toysCategory]);
 
-  console.log(toysCategoryData);
-  console.log(toysCategory);
+  // console.log(toysCategoryData);
+  // console.log(toysCategory);
 
   return (
     <div className="mb-32">
