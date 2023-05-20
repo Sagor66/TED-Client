@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import ActiveRoute from "../../routes/ActiveRoute";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -14,42 +15,44 @@ const NavBar = () => {
 
   return (
     <div className="flex items-center justify-between px-12 py-5 shadow-lg">
-      <div className="flex h-20 items-start">
-        <img
-          className="w-20 h-28 object-cover object-top"
-          src="../../../public/logo.svg"
-          alt=""
-        />
-        <div>
-          <h2 className="font-fredoka font-bold text-5xl text-pink-500 tracking-wider">
-            TED
-          </h2>
-          <small className="text-gradient bg-gradient-to-r from-pink-500 to-indigo-400 font-bold text-sm tracking-tight">
-            TOY-EDUCATION
-          </small>
+      <Link to='/'>
+        <div className="flex h-20 items-start">
+          <img
+            className="w-20 h-28 object-cover object-top"
+            src="../../../public/logo.svg"
+            alt=""
+          />
+          <div>
+            <h2 className="font-fredoka font-bold text-5xl text-pink-500 tracking-wider">
+              TED
+            </h2>
+            <small className="text-gradient bg-gradient-to-r from-pink-500 to-indigo-400 font-bold text-sm tracking-tight">
+              TOY-EDUCATION
+            </small>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className="flex gap-5">
-        <Link className="text-primary-style text-hover" to="/">
+        <ActiveRoute className="text-primary-style text-hover" to="/">
           Home
-        </Link>
-        <Link className="text-primary-style text-hover" to="/all-toys">
+        </ActiveRoute>
+        <ActiveRoute className="text-primary-style text-hover" to="/all-toys">
           All Toys
-        </Link>
+        </ActiveRoute>
         {user && (
           <div className="flex gap-5">
-            <Link className="text-primary-style text-hover" to="/my-toys">
+            <ActiveRoute className="text-primary-style text-hover" to="/my-toys">
               My Toys
-            </Link>
-            <Link className="text-primary-style text-hover" to="/add-toy">
+            </ActiveRoute>
+            <ActiveRoute className="text-primary-style text-hover" to="/add-toy">
               Add-A-Toy
-            </Link>
+            </ActiveRoute>
           </div>
         )}
-        <Link className="text-primary-style text-hover" to="">
+        <ActiveRoute className="text-primary-style text-hover" to="/blogs">
           Blogs
-        </Link>
+        </ActiveRoute>
       </div>
 
       <div className="w-[300px]">
