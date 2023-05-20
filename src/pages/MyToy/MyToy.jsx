@@ -102,12 +102,6 @@ const MyToy = () => {
                 <td>{toy.quantity}</td>
                 <td>{toy.rating}</td>
                 <th>
-                  {/* <button onClick={() => handleUpdate(toy._id)} htmlFor="my-modal-6">
-                    <FontAwesomeIcon
-                      className="fa-xl text-green-500"
-                      icon={faPenToSquare}
-                    />
-                  </button> */}
                   <label htmlFor="my-modal-6" className="">
                     <FontAwesomeIcon
                       className="fa-xl text-green-500"
@@ -184,15 +178,6 @@ const MyToy = () => {
                   </div>
                 </th>
                 <th>
-                  {/* <button
-                    onClick={() => handleDelete(toy._id)}
-                    className=""
-                  >
-                    <FontAwesomeIcon
-                      className="fa-xl text-red-500"
-                      icon={faTrash}
-                    />
-                  </button> */}
                   <label onClick={() => handleDelete(toy._id)} className="">
                     <FontAwesomeIcon
                       className="fa-xl text-red-500"
