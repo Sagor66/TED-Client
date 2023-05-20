@@ -1,4 +1,12 @@
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast from 'react-hot-toast';
+
 const AddToy = () => {
+
+  const { user } = useContext(AuthContext)
+
+  const notifyAdd = () => toast.success("Added Successfully")
 
   const handleAddToy = event => {
     event.preventDefault()
@@ -13,7 +21,7 @@ const AddToy = () => {
     const details = form.details.value
     const rating = form.rating.value
 
-    const newToy = { image: photo, name, subCategory, seller: { name: sellerName, email: sellerEmail }, price, quantity, description: details, rating }
+    const newToy = { image: photo, name, subCategory, seller: { name: sellerName, email: sellerEmail }, price, quantity, description: details, rating, email: user?.email }
 
     console.log(newToy)
 
@@ -28,7 +36,7 @@ const AddToy = () => {
     .then(data => {
       console.log('sending data from AddToy via POST ', data)
       if (data.insertedId) {
-        alert('added successfully')
+        notifyAdd()
       }
     })
   }

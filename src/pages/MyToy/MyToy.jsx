@@ -1,27 +1,36 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./MyToy.css";
+import { AuthContext } from "../../providers/AuthProvider";
+import toast from 'react-hot-toast';
 
 const MyToy = () => {
+  const { user } = useContext(AuthContext)
   const [newToys, setNewToys] = useState([]);
 
+  const url = `http://localhost:5000/newToys?email=${user?.email}`
+
   useEffect(() => {
-    fetch("http://localhost:5000/newToys")
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setNewToys(data));
-  }, []);
+  }, [url]);
+
+  const notifyUpdate = () => toast.success('Updated Successfully')
+  const notifyDelete = () => toast.success('Deleted Successfully')
 
   const handleUpdate = (event, id) => {
     event.preventDefault();
+    // console.log(id)
     const form = event.target;
     const price = form.price.value;
     const quantity = form.quantity.value;
-    const details = form.details.value;
+    const description = form.description.value;
 
-    const updatedData = { price, quantity, details };
+    const updatedData = { price, quantity, description };
 
-    console.log(updatedData);
+    // console.log(updatedData);
 
     fetch(`http://localhost:5000/newToys/${id}`, {
       method: "PATCH",
@@ -32,15 +41,19 @@ const MyToy = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.modifiedCount > 0) {
+          notifyUpdate()
           const remaining = newToys.filter((newToy) => newToy._id !== id);
           const updated = newToys.find((newToy) => newToy._id === id);
+          console.log(updated)
           const updatedData = [updated, ...remaining];
           setNewToys(updatedData);
         }
       });
   };
+
+  
 
   const handleDelete = (id) => {
     const proceed = confirm("Are You sure you want to delete");
@@ -50,16 +63,19 @@ const MyToy = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log("sending data from MyToy via DELETE ", data);
+          // console.log("sending data from MyToy via DELETE ", data);
           if (data.deleteCount > 0) {
-            alert("deleted successfully");
+            notifyDelete()
             const remaining = newToys.filter((newToy) => newToy._id !== id);
             setNewToys(remaining);
           }
         });
     }
   };
-  console.log(newToys);
+
+  
+
+  // console.log(newToys);
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -89,20 +105,20 @@ const MyToy = () => {
                 <td>
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
-                      <img className="w-10" src={toy.photo} alt="" />
+                      <img className="w-10" src={toy.image} alt="" />
                     </div>
                   </div>
                 </td>
                 <td>{toy.name}</td>
                 <td>{toy.subCategory}</td>
-                <td>{toy.details}</td>
-                <td>{toy.sellerName}</td>
-                <td>{toy.sellerEmail}</td>
+                <td>{toy.description}</td>
+                <td>{toy.seller.name}</td>
+                <td>{toy.seller.email}</td>
                 <td>{toy.price}</td>
                 <td>{toy.quantity}</td>
                 <td>{toy.rating}</td>
                 <th>
-                  <label htmlFor="my-modal-6" className="">
+                  <label htmlFor={toy._id} className="">
                     <FontAwesomeIcon
                       className="fa-xl text-green-500"
                       icon={faPenToSquare}
@@ -111,7 +127,7 @@ const MyToy = () => {
                   <div>
                     <input
                       type="checkbox"
-                      id="my-modal-6"
+                      id={toy._id}
                       className="modal-toggle"
                     />
                     <div className="modal modal-bottom sm:modal-middle">
@@ -153,7 +169,7 @@ const MyToy = () => {
                               </label>
                               <input
                                 type="text"
-                                name="details"
+                                name="description"
                                 placeholder="details"
                                 className="input input-bordered"
                               />
@@ -167,7 +183,7 @@ const MyToy = () => {
                         </form>
                         <div className="modal-action">
                           <label
-                            htmlFor="my-modal-6"
+                            htmlFor={toy._id}
                             className="btn bg-red-500 border-0"
                           >
                             Close

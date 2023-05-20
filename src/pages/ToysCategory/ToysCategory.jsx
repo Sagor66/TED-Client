@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./ToyCategory.css"
 import Category from "./Category";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ToysCategory = () => {
+
+  const { user } = useContext(AuthContext)
+
   const [toysCategoryData, setToysCategoryData] = useState([]);
   // const [toysCategory, setToysCategory] = useState("");
   const [toysCategory, setToysCategory] = useState("Science Kits");
   // const [renderData, setRenderData] = useState(false);
+  const [newToys, setNewToys] = useState([])
 
   const getCategory = (event) => {
     const category = event.target.textContent;
@@ -25,8 +30,21 @@ const ToysCategory = () => {
   useEffect(() => {
     fetch(`http://localhost:5000/toys/category/${toysCategory}`)
       .then((res) => res.json())
-      .then((data) => setToysCategoryData(data));
-  }, [toysCategory]);
+      .then((data) => {
+        const newToysData = newToys
+        const allData = [...data, ...newToysData]
+        console.log(allData)
+        setToysCategoryData(allData)
+      });
+  }, [toysCategory, newToys]);
+
+  const url = `http://localhost:5000/newToys/category/${toysCategory}?email=${user?.email}`
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setNewToys(data));
+  }, [url]);
 
   // console.log(toysCategoryData);
   // console.log(toysCategory);
