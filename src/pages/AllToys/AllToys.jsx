@@ -6,7 +6,7 @@ import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [showMore, setShowMore] = useState(false);
-  const [searched, setSearched] = useState(false)
+  const [searched, setSearched] = useState(false);
   const [searchedProduct, setSearchProduct] = useState("");
 
   const handleShowMore = () => {
@@ -17,24 +17,25 @@ const AllToys = () => {
     event.preventDefault();
     const searchTabValue = event.target.search.value;
     setSearchProduct(searchTabValue);
-    event.target.reset()
+    event.target.reset();
   };
 
   const handleBackButton = () => {
-    setSearched(!searched)
-  }
+    setSearched(!searched);
+  };
 
   useEffect(() => {
     fetch("http://localhost:5000/toys")
       .then((res) => res.json())
       .then((data) => {
-        if (!showMore) {
-          setToys(data.slice(0, 20));
-        } else {
-          setToys(data);
-        }
+        setToys(data);
+        // if (!showMore) {
+        //   setToys(data.slice(0, 20));
+        // } else {
+        //   setToys(data);
+        // }
       });
-  }, [showMore]);
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:5000/toys")
@@ -42,11 +43,11 @@ const AllToys = () => {
       .then((data) => {
         const searchedData = data.find((i) => i.name === searchedProduct);
         if (searchedData) {
-          setToys([searchedData])
+          setToys([searchedData]);
         }
 
         if (!searched) {
-          setToys(data.slice(0, 20))
+          setToys(data);
         }
       });
   }, [searchedProduct, searched]);
@@ -62,18 +63,44 @@ const AllToys = () => {
             placeholder="Search Toys Here.."
             className="input input-bordered border-2 border-pink-500 w-96"
           />
-          <button onClick={handleBackButton} className="btn btn-square bg-pink-500 border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600">
-            {
-              searched ? <FontAwesomeIcon className="fa-xl text-white" icon={faArrowLeft} /> : <FontAwesomeIcon className="fa-xl text-white" icon={faSearch} />
-            }
+          <button
+            onClick={handleBackButton}
+            className="btn btn-square bg-pink-500 border-2 border-pink-500 hover:bg-pink-600 hover:border-pink-600"
+          >
+            {searched ? (
+              <FontAwesomeIcon
+                className="fa-xl text-white"
+                icon={faArrowLeft}
+              />
+            ) : (
+              <FontAwesomeIcon className="fa-xl text-white" icon={faSearch} />
+            )}
           </button>
         </div>
       </form>
-      <div className="grid grid-cols-4 gap-4 justify-between items-center">
-        {toys.map((toy) => (
-          <Toy key={toy._id} toy={toy}></Toy>
-        ))}
+      <div className="overflow-x-auto w-full">
+        <table className="table w-full">
+          {/* head */}
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Sub-Category</th>
+              <th>Seller</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>View Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* row 1 */}
+            {toys.map((toy) => (
+              <Toy key={toy._id} toy={toy}></Toy>
+            ))}
+          </tbody>
+        </table>
       </div>
+
       {showMore ? (
         <button onClick={handleShowMore} className="btn-primary mt-20">
           Show Less

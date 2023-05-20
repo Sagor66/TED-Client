@@ -14,31 +14,30 @@ const Toy = ({ toy }) => {
   } = toy;
 
   return (
-    <div className="bg-gradient-to-br from-pink-100 to-indigo-100 p-4 rounded-lg hover:scale-105 ease-in duration-200">
-      <img
-        className="w-80 h-52 object-cover mb-5 rounded-lg border-2 border-white"
-        src={image}
-        alt=""
-      />
-      <div className="ml-1">
-        <h4 className="font-fredoka text-lg font-bold tracking-wide mb-2">
-          {name}
-        </h4>
-        <div className="font-semibold text-sm space-y-1 mb-5">
-          <p>Seller: {seller.name}</p>
-          <p>Category: {subCategory}</p>
-          <p>
-            Price: <span className="text-pink-500">${price}</span>
-          </p>
-          <p>
-            Available: <span className="text-pink-500">{quantity}</span>
-          </p>
+    <tr>
+      <td>
+        <div className="avatar">
+          <div className="mask mask-squircle w-12 h-12">
+            <img className="w-10" src={image} alt="" />
+          </div>
         </div>
-      </div>
-      <button className="w-full btn-primary py-2 mb-2">
-        <Link to={`/toy/${_id}`}>View Details</Link>
-      </button>
-    </div>
+      </td>
+      <td>{name}</td>
+      <td>{subCategory}</td>
+      <td>
+        {seller.name}
+        <br />
+        {seller.email}
+      </td>
+      <td>{price}</td>
+      <td>{quantity}</td>
+
+      <th>
+        <button className="w-full btn-primary py-2 mb-2">
+          <Link to={`/toy/${_id}`}>View Details</Link>
+        </button>
+      </th>
+    </tr>
   );
 };
 
