@@ -13,7 +13,7 @@ const AddToy = () => {
     const details = form.details.value
     const rating = form.rating.value
 
-    const newToy = { photo, name, subCategory, sellerName, sellerEmail, price, quantity, details, rating }
+    const newToy = { image: photo, name, subCategory, seller: { name: sellerName, email: sellerEmail }, price, quantity, description: details, rating }
 
     console.log(newToy)
 
