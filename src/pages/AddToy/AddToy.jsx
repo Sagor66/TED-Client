@@ -146,7 +146,7 @@ const AddToy = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">ADD MY TOY</button>
+            <button className="btn-primary">ADD MY TOY</button>
           </div>
         </div>
       </form>
