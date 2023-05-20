@@ -51,11 +51,12 @@ const SignUp = () => {
     };
   };
   return (
-    <div className="mb-32">
+    <div className="pb-32 bg-gradient-to-r from-pink-500 to-indigo-500">
       <form
         onSubmit={handleSignUp}
         className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto mt-32"
       >
+        <h2 className="text-heading mb-0 mt-10">Sign Up</h2>
         <div className="card-body">
           <div className="form-control">
             <label className="label">

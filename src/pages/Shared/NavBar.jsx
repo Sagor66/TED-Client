@@ -37,12 +37,16 @@ const NavBar = () => {
         <Link className="text-primary-style text-hover" to="/all-toys">
           All Toys
         </Link>
-        <Link className="text-primary-style text-hover" to="/my-toys">
-          My Toys
-        </Link>
-        <Link className="text-primary-style text-hover" to="/add-toy">
-          Add-A-Toy
-        </Link>
+        {user && (
+          <div className="flex gap-5">
+            <Link className="text-primary-style text-hover" to="/my-toys">
+              My Toys
+            </Link>
+            <Link className="text-primary-style text-hover" to="/add-toy">
+              Add-A-Toy
+            </Link>
+          </div>
+        )}
         <Link className="text-primary-style text-hover" to="">
           Blogs
         </Link>
@@ -72,7 +76,7 @@ const NavBar = () => {
             </button>
           </div>
         ) : (
-          <div className="flex gap-10">
+          <div className="flex gap-7">
             <Link to="/signup">
               <button className="btn-primary">Sign Up</button>
             </Link>
