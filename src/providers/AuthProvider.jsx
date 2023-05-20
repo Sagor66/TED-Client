@@ -7,7 +7,6 @@ export const AuthContext = createContext(null)
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
-// const githubProvider = new GithubAuthProvider();
 
 
 const AuthProvider = ({ children }) => {
@@ -35,10 +34,6 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider)
   }
 
-  // const githubSignIn = () => {
-  //   setLoading(true)
-  //   return signInWithPopup(auth, githubProvider)
-  // }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, loggedUser => {

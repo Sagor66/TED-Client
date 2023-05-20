@@ -5,7 +5,7 @@ const ErrorPage = () => {
   console.log(error);
 
   return (
-    <div className="flex flex-col items-center justify-center my-32">
+    <div className="flex flex-col items-center justify-center my-32 font-fredoka">
       <img
         className="w-[400px] h-[400px] object-cover rounded-full"
         src='https://i.ibb.co/1GNyh75/error-robot.gif'
