@@ -14,7 +14,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between px-12 py-5 shadow-lg">
+    <div className="flex flex-col md:flex-row items-center justify-between px-12 py-5 shadow-lg">
       <Link to='/'>
         <div className="flex h-20 items-start">
           <img
@@ -33,7 +33,7 @@ const NavBar = () => {
         </div>
       </Link>
 
-      <div className="flex gap-5">
+      <div className="flex flex-col md:flex-row items-center py-8 gap-5">
         <ActiveRoute className="text-primary-style text-hover" to="/">
           Home
         </ActiveRoute>
@@ -41,7 +41,7 @@ const NavBar = () => {
           All Toys
         </ActiveRoute>
         {user && (
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row items-center gap-5">
             <ActiveRoute className="text-primary-style text-hover" to="/my-toys">
               My Toys
             </ActiveRoute>
@@ -57,7 +57,7 @@ const NavBar = () => {
 
       <div className="w-[300px]">
         {user ? (
-          <div className="flex items-center gap-8">
+          <div className="flex justify-center items-center gap-8">
             <div
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
@@ -79,7 +79,7 @@ const NavBar = () => {
             </button>
           </div>
         ) : (
-          <div className="flex gap-7">
+          <div className="flex justify-center gap-7">
             <Link to="/signup">
               <button className="btn-primary">Sign Up</button>
             </Link>

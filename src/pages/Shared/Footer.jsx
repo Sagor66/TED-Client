@@ -9,8 +9,8 @@ import {
 const Footer = () => {
   return (
     <div className="bg-gradient-to-br from-slate-100 to-indigo-100 py-20 px-12">
-      <div className="grid grid-cols-5">
-        <div className="col-span-2">
+      <div className="grid justify-center md:grid-cols-5 space-y-4">
+        <div className="md:col-span-2">
           <div className="flex h-20 items-start mb-4">
             <img
               className="w-20 h-28 object-cover object-top"

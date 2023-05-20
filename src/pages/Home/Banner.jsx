@@ -16,16 +16,16 @@ const Banner = () => {
       </div>
       <div>
         <div>
-          <img className="w-96 absolute bottom-0 left-10" src={kid1} alt="" />
+          <img className="w-96 absolute bottom-0 left-10 hidden md:block" src={kid1} alt="" />
           <img
-            className="w-[450px] absolute bottom-0 left-40"
+            className="w-[450px] absolute bottom-0 left-40 hidden md:block"
             src={kid2}
             alt=""
           />
         </div>
         <div>
           <img
-            className="h-[450px] absolute bottom-0 right-10"
+            className="h-[450px] absolute bottom-0 right-10 hidden md:block"
             src={kid3}
             alt=""
           />

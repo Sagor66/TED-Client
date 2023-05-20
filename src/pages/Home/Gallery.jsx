@@ -12,14 +12,14 @@ const Gallery = () => {
   return (
     <div className="mb-32">
       <h2 className="text-heading ">Toyland Treasures</h2>
-      <div className="grid grid-cols-5 gap-4 shadow-2xl p-10 rounded-xl bg-gradient-to-br from-pink-100 to-indigo-100">
-        <div className="min-w-[200px] min-h-[200px] row-span-2 col-span-2">
+      <div className="grid md:grid-cols-5 gap-4 shadow-2xl p-10 rounded-xl bg-gradient-to-br from-pink-100 to-indigo-100">
+        <div className="min-w-[200px] min-h-[200px] row-span-2 md:col-span-2">
           <img className="object-cover w-full h-full border-4 border-white rounded-xl hover:scale-105 ease-in duration-500" src={toy12} alt="" />
         </div>
         <div className="min-w-[200px] min-h-[200px] row-span-3">
           <img className="object-cover w-full h-full border-4 border-white rounded-xl hover:scale-105 ease-in duration-500" src={toy1} alt="" />
         </div>
-        <div className="min-w-[200px] min-h-[200px] col-span-2">
+        <div className="min-w-[200px] min-h-[200px] md:col-span-2">
           <img className="object-cover w-full h-full border-4 border-white rounded-xl hover:scale-105 ease-in duration-500" src={toy4} alt="" />
         </div>
         <div className="min-w-[200px] min-h-[200px]">
@@ -37,7 +37,7 @@ const Gallery = () => {
         <div className="min-w-[200px] min-h-[200px] row-span-2">
           <img className="object-cover w-full h-full border-4 border-white rounded-xl hover:scale-105 ease-in duration-500" src={toy11} alt="" />
         </div>
-        <div className="min-w-[200px] min-h-[200px] col-span-3">
+        <div className="min-w-[200px] min-h-[200px] md:col-span-3">
           <img className="object-cover w-full h-full border-4 border-white rounded-xl hover:scale-105 ease-in duration-500" src={toy8} alt="" />
         </div>
       </div>

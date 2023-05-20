@@ -62,28 +62,28 @@ const ToysCategory = () => {
 
         <div className="max-w-6xl mx-auto mt-10">
           <TabPanel>
-            <div className="grid grid-cols-4 gap-4 justify-between items-center">
+            <div className="grid justify-center md:grid-cols-4 gap-4 md:justify-between items-center">
               {toysCategoryData.map((categoryData) => (
                 <Category key={categoryData._id} categoryData={categoryData}></Category>
               ))}
             </div>
           </TabPanel>
           <TabPanel>
-            <div className="grid grid-cols-4 gap-4 justify-between items-center">
+            <div className="grid md:grid-cols-4 gap-4 justify-center md:justify-between items-center">
               {toysCategoryData.map((categoryData) => (
                 <Category key={categoryData._id} categoryData={categoryData}></Category>
               ))}
             </div>
           </TabPanel>
           <TabPanel>
-            <div className="grid grid-cols-4 gap-4 justify-between items-center">
+            <div className="grid md:grid-cols-4 gap-4 justify-center md:justify-between items-center">
               {toysCategoryData.map((categoryData) => (
                 <Category key={categoryData._id} categoryData={categoryData}></Category>
               ))}
             </div>
           </TabPanel>
           <TabPanel>
-            <div className="grid grid-cols-4 gap-4 justify-between items-center">
+            <div className="grid md:grid-cols-4 gap-4 justify-center md:justify-between items-center">
               {toysCategoryData.map((categoryData) => (
                 <Category key={categoryData._id} categoryData={categoryData}></Category>
               ))}

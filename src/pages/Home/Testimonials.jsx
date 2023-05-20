@@ -9,9 +9,9 @@ const Testimonials = () => {
   
 
   return (
-    <div className="my-52 flex items-center">
-      <h2 className="text-heading w-[500px]">Testimonials <br /> & <br /> Reviews</h2>
-      <div className="shadow-2xl shadow-pink-200 px-10 py-16 rounded-xl max-w-3xl mx-auto">
+    <div className="my-52 flex flex-col md:flex-row items-center">
+      <h2 className="text-heading w-[400px] md:w-[500px]">Testimonials <br /> & <br /> Reviews</h2>
+      <div className="shadow-2xl shadow-pink-200 px-2 md:px-10 py-16 rounded-xl max-w-[400px] md:max-w-3xl mx-auto">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={50}
