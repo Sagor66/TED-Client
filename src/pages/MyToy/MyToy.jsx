@@ -3,13 +3,13 @@ import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useEffect, useState } from "react";
 import "./MyToy.css";
 import { AuthContext } from "../../providers/AuthProvider";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 const MyToy = () => {
-  const { user } = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const [newToys, setNewToys] = useState([]);
 
-  const url = `http://localhost:5000/newToys?email=${user?.email}`
+  const url = `http://localhost:5000/newToys?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
@@ -17,8 +17,8 @@ const MyToy = () => {
       .then((data) => setNewToys(data));
   }, [url]);
 
-  const notifyUpdate = () => toast.success('Updated Successfully')
-  const notifyDelete = () => toast.success('Deleted Successfully')
+  const notifyUpdate = () => toast.success("Updated Successfully");
+  const notifyDelete = () => toast.success("Deleted Successfully");
 
   const handleUpdate = (event, id) => {
     event.preventDefault();
@@ -43,17 +43,15 @@ const MyToy = () => {
       .then((data) => {
         // console.log(data);
         if (data.modifiedCount > 0) {
-          notifyUpdate()
+          notifyUpdate();
           const remaining = newToys.filter((newToy) => newToy._id !== id);
           const updated = newToys.find((newToy) => newToy._id === id);
-          console.log(updated)
+          console.log(updated);
           const updatedData = [updated, ...remaining];
           setNewToys(updatedData);
         }
       });
   };
-
-  
 
   const handleDelete = (id) => {
     const proceed = confirm("Are You sure you want to delete");
@@ -65,7 +63,7 @@ const MyToy = () => {
         .then((data) => {
           // console.log("sending data from MyToy via DELETE ", data);
           if (data.deleteCount > 0) {
-            notifyDelete()
+            notifyDelete();
             const remaining = newToys.filter((newToy) => newToy._id !== id);
             setNewToys(remaining);
           }
@@ -73,13 +71,37 @@ const MyToy = () => {
     }
   };
 
-  
+  const handleSelectChange = (event) => {
+    const sortOrder = event.target.value;
+    const sortedItems = [...newToys].sort((a, b) => {
+      if (a.price && b.price) {
+        if (sortOrder === "ascending") {
+          return parseFloat(a.price) - parseFloat(b.price);
+        } else if (sortOrder === "descending") {
+          return parseFloat(b.price) - parseFloat(a.price);
+        }
+      }
+    });
+    setNewToys(sortedItems);
+  };
 
   // console.log(newToys);
 
   return (
     <div className="max-w-7xl mx-auto">
-      <h2 className="text-heading mt-16">My Toys</h2>
+      <h2 className="text-heading mt-16 mb-8">My Toys</h2>
+      <div className="mb-6 w-1/4 ml-auto">
+        <select
+          onChange={handleSelectChange}
+          className="select select-bordered w-full"
+        >
+          <option disabled value="" selected>
+            Sort By Price
+          </option>
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
+      </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
