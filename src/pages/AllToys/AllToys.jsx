@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Toy from "./Toy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const AllToys = () => {
+
+  const { user } = useContext(AuthContext)
+
   const [toys, setToys] = useState([]);
   const [showMore, setShowMore] = useState(false);
   const [searched, setSearched] = useState(false);
   const [searchedProduct, setSearchProduct] = useState("");
+  const [newToys, setNewToys] = useState([])
 
   const handleShowMore = () => {
     setShowMore(!showMore);
@@ -29,14 +34,12 @@ const AllToys = () => {
     fetch("https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
-        setToys(data);
-        // if (!showMore) {
-        //   setToys(data.slice(0, 20));
-        // } else {
-        //   setToys(data);
-        // }
+        const newToysData = newToys
+        const allData = [...data, ...newToysData]
+        console.log(allData)
+        setToys(allData);
       });
-  }, []);
+  }, [newToys]);
 
   useEffect(() => {
     fetch("https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/toys")
@@ -52,6 +55,14 @@ const AllToys = () => {
         }
       });
   }, [searchedProduct, searched]);
+
+  const url = `https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/newToys?email=${user?.email}`
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setNewToys(data));
+  }, [url]);
 
   return (
     <div className="max-w-7xl mx-auto my-32 flex flex-col items-center">
@@ -105,7 +116,7 @@ const AllToys = () => {
         </table>
       </div>
 
-      {showMore ? (
+      {/* {showMore ? (
         <button onClick={handleShowMore} className="btn-primary mt-20">
           Show Less
         </button>
@@ -113,7 +124,7 @@ const AllToys = () => {
         <button onClick={handleShowMore} className="btn-primary mt-20">
           Show More
         </button>
-      )}
+      )} */}
     </div>
   );
 };
