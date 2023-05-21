@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Toy from "./Toy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
@@ -54,6 +55,9 @@ const AllToys = () => {
 
   return (
     <div className="max-w-7xl mx-auto my-32 flex flex-col items-center">
+      <Helmet>
+        <title>TED | All-Toys</title>
+      </Helmet>
       <h2 className="text-heading">Toyland</h2>
       <form onSubmit={handleSearch} className="form-control mb-16">
         <div className="input-group">

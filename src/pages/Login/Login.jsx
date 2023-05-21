@@ -3,6 +3,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInUser, googleSignIn } = useContext(AuthContext);
@@ -48,6 +49,9 @@ const Login = () => {
 
   return (
     <div className="pb-32 bg-gradient-to-r from-pink-500 to-indigo-500">
+      <Helmet>
+        <title>TED | Login</title>
+      </Helmet>
       <form
         onSubmit={handleLogin}
         className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto mt-32"
@@ -85,6 +89,7 @@ const Login = () => {
           <div className="form-control mt-6">
             <button className="btn-primary">Login</button>
           </div>
+          <p className="text-sm text-red-600 max-w-sm mt-3">{error}</p>
         </div>
         <div className="flex flex-col justify-start items-center gap-5 mb-10">
           <p className="text-indigo-500 font-bold">Sign-in with</p>
@@ -96,7 +101,6 @@ const Login = () => {
         </div>
       </form>
 
-      <p className="text-sm text-red-600 max-w-sm mt-8">{error}</p>
     </div>
   );
 };

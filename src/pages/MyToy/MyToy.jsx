@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import "./MyToy.css";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const MyToy = () => {
   const { user } = useContext(AuthContext);
@@ -89,6 +90,9 @@ const MyToy = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
+      <Helmet>
+        <title>TED | My-Toys</title>
+      </Helmet>
       <h2 className="text-heading mt-16 mb-8">My Toys</h2>
       <div className="mb-6 w-1/4 ml-auto">
         <select

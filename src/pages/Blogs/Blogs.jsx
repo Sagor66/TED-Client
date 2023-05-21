@@ -1,7 +1,12 @@
+import {Helmet} from "react-helmet";
+
 
 const Blogs = () => {
   return (
     <div className="max-w-7xl mx-auto my-32 space-y-3">
+      <Helmet>
+        <title>TED | Blogs</title>
+      </Helmet>
       <h3 className="text-3xl font bold">What is an access token and refresh token? How do they work and where should we store them on the client-side?</h3>
       <p className="text-xl">Access token grant permission to access specific resource on behalf of a user. Refresh token is used to obtain a new access token when the current one expires. They work after the user successful authenticates and authorizes the application. They can be stored in secure HTTP-only cookies or browser's local storage</p>
       <h3 className="text-3xl font bold">Compare SQL and NoSQL databases?</h3>

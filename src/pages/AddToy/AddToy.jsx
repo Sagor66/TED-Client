@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from 'react-hot-toast';
+import { Helmet } from "react-helmet";
 
 const AddToy = () => {
 
@@ -43,6 +44,9 @@ const AddToy = () => {
 
   return (
     <div className="mb-32">
+      <Helmet>
+        <title>TED | Add-a-toy</title>
+      </Helmet>
       <h2 className="text-heading mt-16">ADD A TOY</h2>
       <form onSubmit={handleAddToy} className="card flex-shrink-0 w-full max-w-7xl shadow-2xl bg-base-100 mx-auto">
         <div className="card-body">
@@ -89,7 +93,7 @@ const AddToy = () => {
               <input
                 type="text"
                 name="sellerName"
-                placeholder="seller name"
+                defaultValue={user?.displayName}
                 className="input input-bordered"
               />
             </div>
@@ -100,7 +104,7 @@ const AddToy = () => {
               <input
                 type="text"
                 name="sellerEmail"
-                placeholder="seller email"
+                defaultValue={user?.email}
                 className="input input-bordered"
               />
             </div>

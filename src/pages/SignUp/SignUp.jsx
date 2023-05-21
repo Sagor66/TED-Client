@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -52,6 +53,9 @@ const SignUp = () => {
   };
   return (
     <div className="pb-32 bg-gradient-to-r from-pink-500 to-indigo-500">
+      <Helmet>
+        <title>TED | Sign-Up</title>
+      </Helmet>
       <form
         onSubmit={handleSignUp}
         className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100 mx-auto mt-32"
@@ -109,6 +113,7 @@ const SignUp = () => {
           <div className="form-control mt-6">
             <button className="btn-primary">Sign Up</button>
           </div>
+          <p className="text-sm text-red-600 max-w-sm mb-2">{error}</p>
           <p className="text-right mt-3">
             Already have an account?{" "}
             <Link className="text-red-600" to="/login">
@@ -117,7 +122,7 @@ const SignUp = () => {
           </p>
         </div>
       </form>
-      <p className="text-sm text-red-600 max-w-sm mt-8">{error}</p>
+      
     </div>
   );
 };
