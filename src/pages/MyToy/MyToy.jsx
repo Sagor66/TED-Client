@@ -9,7 +9,7 @@ const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [newToys, setNewToys] = useState([]);
 
-  const url = `http://localhost:5000/newToys?email=${user?.email}`;
+  const url = `https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/newToys?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
@@ -32,7 +32,7 @@ const MyToy = () => {
 
     // console.log(updatedData);
 
-    fetch(`http://localhost:5000/newToys/${id}`, {
+    fetch(`https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/newToys/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -56,7 +56,7 @@ const MyToy = () => {
   const handleDelete = (id) => {
     const proceed = confirm("Are You sure you want to delete");
     if (proceed) {
-      fetch(`http://localhost:5000/newToys/${id}`, {
+      fetch(`https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/newToys/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -103,7 +103,7 @@ const MyToy = () => {
         </select>
       </div>
       <div className="overflow-x-auto w-full">
-        <table className="table w-full">
+        <table className="table table-auto w-[400px] md:w-full">
           {/* head */}
           <thead>
             <tr>

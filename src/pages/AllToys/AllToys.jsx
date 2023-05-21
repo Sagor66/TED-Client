@@ -25,7 +25,7 @@ const AllToys = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
@@ -38,7 +38,7 @@ const AllToys = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         const searchedData = data.find((i) => i.name === searchedProduct);

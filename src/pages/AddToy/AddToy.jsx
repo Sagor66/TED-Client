@@ -25,7 +25,7 @@ const AddToy = () => {
 
     console.log(newToy)
 
-    fetch('http://localhost:5000/newToys', {
+    fetch('https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/newToys', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

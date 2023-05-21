@@ -22,13 +22,13 @@ const ToysCategory = () => {
   };
 
   // useEffect(() => {
-  //   fetch(`http://localhost:5000/toys/category/${toysCategory}`)
+  //   fetch(`https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/toys/category/${toysCategory}`)
   //     .then((res) => res.json())
   //     .then((data) => setToysCategoryData(data));
   // }, [toysCategory, renderData]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/category/${toysCategory}`)
+    fetch(`https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/toys/category/${toysCategory}`)
       .then((res) => res.json())
       .then((data) => {
         const newToysData = newToys
@@ -38,7 +38,7 @@ const ToysCategory = () => {
       });
   }, [toysCategory, newToys]);
 
-  const url = `http://localhost:5000/newToys/category/${toysCategory}?email=${user?.email}`
+  const url = `https://b7a11-toy-marketplace-server-side-sagor66.vercel.app/newToys/category/${toysCategory}?email=${user?.email}`
 
   useEffect(() => {
     fetch(url)

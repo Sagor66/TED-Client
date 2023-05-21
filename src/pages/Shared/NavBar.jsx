@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import ActiveRoute from "../../routes/ActiveRoute";
+import logo from '../../../public/logo.svg'
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -19,7 +20,7 @@ const NavBar = () => {
         <div className="flex h-20 items-start">
           <img
             className="w-20 h-28 object-cover object-top"
-            src="../../../public/logo.svg"
+            src={logo}
             alt=""
           />
           <div>
