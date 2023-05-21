@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const ToyDetails = () => {
@@ -15,6 +16,9 @@ const ToyDetails = () => {
 
   return (
     <div className="max-w-7xl mx-auto mb-32">
+      <Helmet>
+        <title>TED | {name}</title>
+      </Helmet>
       <h2 className="font-fredoka text-4xl font-bold tracking-wide text-gradient bg-gradient-to-r from-pink-500 to-indigo-500 text-center mt-20 mb-10">
         {name}
       </h2>

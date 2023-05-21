@@ -48,7 +48,7 @@ const AddToy = () => {
         <title>TED | Add-a-toy</title>
       </Helmet>
       <h2 className="text-heading mt-16">ADD A TOY</h2>
-      <form onSubmit={handleAddToy} className="card flex-shrink-0 w-full max-w-7xl shadow-2xl bg-base-100 mx-auto">
+      <form onSubmit={handleAddToy} className="card flex-shrink-0 w-full max-w-7xl shadow-2xl bg-base-100 mx-auto bg-gradient-to-br from-pink-50 to-indigo-50 p-4">
         <div className="card-body">
           <div className="form-control">
             <label className="label">
@@ -81,6 +81,7 @@ const AddToy = () => {
                 type="text"
                 name="subCategory"
                 placeholder="category"
+                defaultValue='Engineering Kits'
                 className="input input-bordered"
               />
             </div>
@@ -93,6 +94,7 @@ const AddToy = () => {
               <input
                 type="text"
                 name="sellerName"
+                placeholder="name"
                 defaultValue={user?.displayName}
                 className="input input-bordered"
               />
@@ -104,6 +106,7 @@ const AddToy = () => {
               <input
                 type="text"
                 name="sellerEmail"
+                placeholder="email"
                 defaultValue={user?.email}
                 className="input input-bordered"
               />
