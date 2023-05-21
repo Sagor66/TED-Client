@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
-      <Toaster />
+      <Toaster position="top-right" reverseOrder={false} />
     </AuthProvider>
   </React.StrictMode>
 );
